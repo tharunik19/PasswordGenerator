@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="PasswordGenerator.css">
+</head>
+
+<body>
+    <div class="password-generator">
+        <div class="title">Generated Password</div>
+        <div class="password" id="password">Click Generate</div>
+
+        <div class="length">
+            <div class="title">Length: <span id="password-length-display">10</span></div>
+            <input type="range" id="password-length" min="8" max="20" value="10">
+        </div>
+
+        <div class="settings">
+            <div class="title">Settings & Customization</div>
+            <div class="list">
+                <div class="item">
+                    <input type="checkbox" id="setting-number">
+                    <label for="setting-number">Include Numbers</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="setting-specialchar">
+                    <label for="setting-specialchar">Include Special Characters</label>
+                </div>
+                <input type="text" id="start-char" placeholder="Start with (Optional)">
+                <input type="text" id="end-char" placeholder="End with (Optional)">
+                <input type="text" id="include-chars" placeholder="Must include (Optional)">
+                <input type="text" id="exclude-chars" placeholder="Exclude characters (Optional)">
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button id="password-generator">Generate</button>
+            <button id="save-password">Save</button>
+        </div>
+
+        <div class="saved-passwords">
+            <div class="title">Saved Passwords</div>
+            <ul id="password-list"></ul>
+        </div>
+    </div>
+
+    <script src="PasswordGenerator.js"></script>
+</body>
+
+</html>
